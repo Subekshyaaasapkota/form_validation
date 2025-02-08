@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="#" method="post" onsubmit="return validateEmail()">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+
+           
+            const emailPattern =/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-z]$/ ;
+
+            
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;  
+            }
+
+            return true;  
+        }
+    </script>
+</body>
+</html>
